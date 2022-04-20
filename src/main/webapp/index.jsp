@@ -20,13 +20,14 @@
   h1{
    position: absolute;
    top: 30%;
-   left: 30%;
+   left: 35%;
   }
   
   h3{
     position: absolute;
     top: 110%;
-    left: -12%;
+    left: 0%;
+    
   }
   
   
@@ -38,15 +39,15 @@
  
     <h1>Bem vindo ao curso de JSP</h1>
         
-    <form action="ServletLogin"  method="post" class="row g-3 needs-validation" novalidate>
+    <form action="<%= request.getContextPath() %>/ServletLogin"  method="post" class="row g-3 needs-validation" novalidate>
     <input="hiden" value=<%= request.getParameter("url") %> name="url">
     
-     <div class="col-md-6">
+     <div class="mb-3">
        <label class="form-label">Login:</label>
        <input class="form-control" name="login" type = "text" required="required">
      </div> 
       
-     <div class="col-md-6"> 
+     <div class="mb-3"> 
        <label class="form-label">Senha:</label>
        <input class="form-control" name="senha" type = "password" required="required">   
      </div>       
